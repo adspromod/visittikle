@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tikal Guatemala</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            position: relative;
+        }
+
+        #left-title {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 3em;
+            color: #006400;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #006400;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 1px #ccc;
+        }
+
+        .places {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .place {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .place:hover {
+            transform: scale(1.03);
+        }
+
+        .place img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #006400;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            #left-title {
+                font-size: 2.5em;
+                left: 10px;
+                top: 10px;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            .places {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #left-title {
+                font-size: 2em;
+                left: 5px;
+                top: 5px;
+            }
+
+            .places {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .place img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="left-title">Tikal Guatemala</div>
+
+<section id="places">
+    <h2>Top Places to Visit Tikal</h2>
+    <div class="places">
+        <div class="place" onclick="openGallery('Temple I', 'Temple I (Great Jaguar) – A Monument to Maya Civilization Temple I also known as the Great Jaguar Temple is one of the most iconic and awe-inspiring structures in the ancient Maya city of Tikal located in present-day Guatemala. This towering pyramid stands as a monumental testament to the religious political and architectural achievements of the Maya civilization particularly during the reign of the powerful ruler Jasaw Chan Kawiil I.Temple I was constructed around the late 7th century during the reign of Jasaw Chan Kawiil I a king who played a pivotal role in restoring Tikal’s dominance over other Maya city-states. His reign marked a period of significant prosperity for Tikal and Temple I was built as both a tomb for the king and a symbol of his divine rule. This grand pyramid was intended to honor the ruler and connect him with the gods after his death. It was also an architectural reflection of the city’s power wealth and political influence during the Classic Period of the Maya civilization. Temple I is not only significant because of its grandeur but also because it served as a physical representation of Maya cosmology. The Maya saw their cities and especially their temples as links between the earthly realm and the heavens. The structure’s height and steps symbolize a journey between the underworld the earth and the celestial realms. Temples like Temple I were designed to ensure the continuity of the ruler’s spirit in the afterlife and maintain the balance between the living and the divine.', ['images/temple1.jpg', 'images/temple2.jpg','images/temple4.jpg'])">
+            <img src="images/temple1.jpg" alt="Temple I">
+            <h3>Temple I (Great Jaguar)</h3>
+            <p>This iconic temple stands at 47 meters, built to honor Jasaw Chan K'awiil I.</p>
+        </div>
+        <div class="place" onclick="openGallery('Great Plaza', 'The Great Plaza, located at the center of the ancient Maya city of Tikal in present-day Guatemala, is one of the most significant and impressive archaeological sites from the Classic Period of the Maya civilization. As a central feature of Tikal, the Great Plaza served not only as a political and ceremonial center but also as a reflection of the Maya’s advanced understanding of urban planning, architecture, and cosmology. Its design and layout provide important insights into the cultural, religious, and political dynamics of one of the most powerful Maya city-states. The Great Plaza was at the heart of Tikal, a city that flourished between the 3rd and 10th centuries AD. During this time, Tikal was one of the most powerful Maya cities, with significant influence over trade, politics, and religion in the Maya lowlands. The plaza was used for various important activities, including political meetings, religious ceremonies, and public gatherings. It was the backdrop for the actions of the rulers of Tikal, who were often depicted in carvings and inscriptions as divinely ordained leaders connected to the gods.', ['images/greatplaza1.jpg'])">
+            <img src="images/greatplaza1.jpg" alt="Great Plaza">
+            <h3>Great Plaza</h3>
+            <p>The heart of Tikal, surrounded by iconic temples and historical wonders.</p>
+        </div>
+        <div class="place" onclick="openGallery('Temple IV', 'Temple IV, also known as the Temple of the Two-Headed Serpent, is one of the most impressive and towering structures in the ancient Maya city of Tikal, located in present-day Guatemala. This pyramid, rising 70 meters (230 feet) into the sky, is the tallest structure at Tikal and one of the tallest in the Maya world. Standing as a testament to the architectural ingenuity and religious significance of the Maya civilization, Temple IV holds immense historical and cultural importance. Its grandeur and strategic placement offer valuable insights into the political and spiritual life of the Maya, as well as their understanding of the cosmos and divine power. Temple IV was built during the late Classic Period of the Maya civilization, around the 8th century AD. It is believed to have been constructed during the reign of the Maya ruler Yikin Chan Kawiil, who was part of the Tikal dynasty and ruled over the city at a time when Tikal was engaged in both political rivalries and military conflicts with other powerful city-states. The construction of Temple IV, like many other grand Maya structures, was intended to serve both as a monument to the rulers divine authority and as a religious center.', ['images/templ41.jpg', 'images/templ42.jpg'])">
+            <img src="images/templ42.jpg" alt="Temple IV">
+            <h3>Temple IV</h3>
+            <p>The tallest temple at 70 meters, offering breathtaking jungle views.</p>
+        </div>
+        <div class="place" onclick="openGallery('Lost World Complex', 'The Lost World Complex, located within the ancient Maya city of Tikal in present-day Guatemala, is one of the most intriguing and monumental areas of the entire archaeological site. Renowned for its remarkable pyramids, plazas, and grand ceremonial structures, the Lost World Complex is a testament to the advanced engineering, architecture, and urban planning of the Maya civilization during its peak in the Classic Period. As one of the most significant components of Tikal, the Lost World Complex offers invaluable insights into the religious, political, and social life of the Maya people. The Lost World Complex is believed to have been constructed during the late Preclassic to early Classic Period of the Maya civilization, between 400 BC and 100 AD. This period was crucial for the development of Tikal as a powerful city-state in the Maya lowlands. During this time, Tikal was establishing itself as a center of political, economic, and religious influence, and the Lost World Complex was an important part of this development. It was the site of the city’s early dynastic rulers and served as a key location for ceremonial and ritual activities that reinforced the divine authority of the king', ['images/lostworld1.jpg', 'images/lostworld2.jpg'])">
+            <img src="images/lostworld1.jpg" alt="Lost World Complex">
+            <h3>Lost World Complex</h3>
+            <p>A Maya astronomical complex used for rituals and stargazing.</p>
+        </div>
+		<div class="place" onclick="openGallery('Central Acropolis', 'The Central Acropolis is one of the most significant and fascinating areas of Tikal. It was likely the royal residence and served as the center of political and administrative power in the ancient city. The complex consists of several interconnected buildings arranged around a central plaza. It is believed that the rulers of Tikal lived here and conducted important ceremonies and events. The architecture of the Central Acropolis is characterized by large structures with intricate carvings and stonework. This area provides insight into the social and political life of the Maya civilization and offers a glimpse into the grandeur of Tikals past. Exploring the Central Acropolis allows visitors to imagine the daily life and power struggles that took place in this historic center. The location of the complex also offers excellent views of the surrounding city and jungle providing a sense of the vastness of the ancient city.', ['images/central1.jpg', 'images/central2.jpg'])">
+            <img src="images/central1.jpg" alt="Central Acropolis">
+            <h3>Central Acropolis</h3>
+            <p>This complex of interconnected buildings was likely a royal residence. The area offers a good example of the urban layout of ancient Tikal</p>
+        </div>
+		<div class="place" onclick="openGallery('North Acropolis','The North Acropolis is one of the oldest and most important areas in Tikal. It consists of a group of temples and platforms built over several centuries. This area is believed to have been used for funerary and ceremonial purposes. Archaeologists have found many tombs and offerings in the structures here. The North Acropolis served as a royal burial site where important figures were laid to rest. The buildings are arranged in a way that shows the complexity of the ancient Maya city planning. The North Acropolis offers a unique look into the religious and cultural practices of the Maya people. It provides visitors with a sense of the citys early history and the significance of Tikal as a political and spiritual center. The area is less crowded compared to other parts of Tikal making it a peaceful spot to reflect on the ancient ruins.', ['images/north1.jpg', 'images/north2.jpg'])">
+			<img src="images/north1.jpg" alt="North Acropolis">
+            <h3>North Acropolis</h3>
+            <p>One of the oldest parts of the city, this area contains numerous tombs and temples, many of which have been excavated.</p>
+        </div>
+		<div class="place" onclick="openGallery('Mundo Perdido','Mundo Perdido is an ancient site located in the northern part of Tikal. This area is home to several large pyramids and temples which are thought to be part of an early ceremonial complex. The name Mundo Perdido translates to Lost World in English reflecting the mystery surrounding this area. The site is quieter and less visited than the more famous sections of Tikal offering a sense of isolation and discovery. The pyramids here are significant in understanding the development of Tikal as they were built during the citys early years. Mundo Perdido provides an opportunity to see how the ancient Maya civilization evolved over time. Visitors can explore the structures and imagine the rituals that may have taken place there. The sites location deep within the jungle adds to the feeling of stepping back in time to an ancient world.', ['images/mundo1.jpg', 'images/mundo2.jpg'])">
+     		<img src="images/mundo1.jpg" alt="Mundo Perdido">
+            <h3>Mundo Perdido</h3>
+            <p>A cluster of temples located in a more remote part of the site. It's less crowded and provides an immersive experience of Tikal's ancient grandeur.</p>
+        </div>
+		<div class="place" onclick="openGallery('Tikal Museum','The Tikal Museum is located near the entrance of the Tikal archaeological site and offers visitors a chance to learn more about the history and discoveries of this ancient city. The museum displays a wide range of artifacts that have been uncovered during excavations at the site. These include pottery tools jewelry and sculptures that provide insight into the daily life and culture of the Maya civilization. The museum also presents the history of Tikal and its role in the larger context of the Maya world. It explains how the city grew and developed over the centuries and highlights its significance in trade politics and religion. The exhibits in the museum help visitors better understand the ruins they see in Tikal and offer a deeper connection to the ancient city. With its informative displays and artifacts the Tikal Museum is a valuable resource for anyone looking to learn more about the fascinating history of Tikal and the Maya people.', ['images/museum1.jpg', 'images/museum2.jpg'])">
+		<img src="images/museum1.jpg" alt="The Tikal Museum">
+            <h3>Tikal Museum</h3>
+            <p> Situated near the entrance of the park, this museum offers insight into the history and discoveries of the Tikal ruins, with displays of artifacts found during excavations</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Tikal Beauty. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function openGallery(title, description, images) {
+        const imageUrls = images.join(',');
+        const url = `place.html?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&images=${encodeURIComponent(imageUrls)}`;
+        window.location.href = url;
+    }
+</script>
+
+</body>
+</html>

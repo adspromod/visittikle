@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Place Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        #back-btn {
+            display: inline-block;
+            padding: 10px;
+            background-color: #006400;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        #back-btn:hover {
+            background-color: #004d00;
+        }
+
+        h1 {
+            color: #006400;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .gallery-item p {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<a href="index.html" id="back-btn">Back to Main Page</a>
+
+<h1 id="place-title"></h1>
+<p id="place-description"></p>
+
+<div class="gallery" id="gallery"></div>
+
+<script>
+    function getUrlParams() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return {
+            title: urlParams.get('title'),
+            description: urlParams.get('description'),
+            images: urlParams.get('images').split(',')
+        };
+    }
+
+    window.onload = function() {
+        const { title, description, images } = getUrlParams();
+        
+        document.getElementById('place-title').textContent = title;
+        document.getElementById('place-description').textContent = description;
+        
+        const gallery = document.getElementById('gallery');
+        images.forEach(imageUrl => {
+            const galleryItem = document.createElement('div');
+            galleryItem.classList.add('gallery-item');
+            
+            const img = document.createElement('img');
+            img.src = imageUrl;
+            galleryItem.appendChild(img);
+            
+            gallery.appendChild(galleryItem);
+        });
+    };
+</script>
+
+</body>
+</html>
